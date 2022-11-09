@@ -8,7 +8,7 @@ function Emails(props) {
 
   return (
     <ul>
-      {openEmail && (
+      {openEmail !== null && (
         <EmailBody openEmail={openEmail} setOpenEmail={setOpenEmail} />
       )}
       {openEmail === null &&
