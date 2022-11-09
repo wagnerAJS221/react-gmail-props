@@ -14,7 +14,7 @@ function Email(props) {
           className="select-checkbox"
           type="checkbox"
           checked={email.read}
-          onChange={() => toggleRead(email)}
+          onClick={(event) => toggleRead(email, event)}
         />
       </div>
       <div className="star">
@@ -22,7 +22,7 @@ function Email(props) {
           className="star-checkbox"
           type="checkbox"
           checked={email.starred}
-          onChange={() => toggleStar(email)}
+          onClick={(event) => {toggleStar(email, event)}}
         />
       </div>
       <div className="sender">{email.sender}</div>

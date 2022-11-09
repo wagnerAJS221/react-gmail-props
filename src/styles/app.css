@@ -89,7 +89,7 @@
   padding: 10px;
   background-color: white;
   font-size: 0.9rem;
-
+  cursor: pointer;
   border-bottom: solid 1px #00000020;
 }
 
@@ -143,4 +143,8 @@
 
 .email .star-checkbox:checked::before {
   background-image: url(https://www.gstatic.com/images/icons/material/system/2x/star_googyellow500_20dp.png);
+}
+
+.select input, .star input {
+  cursor: pointer
 }
