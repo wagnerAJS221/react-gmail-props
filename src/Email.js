@@ -1,8 +1,14 @@
 function Email(props) {
-  const { email, index, toggleRead, toggleStar } = props;
+  const { email, index, toggleRead, toggleStar, setOpenEmail } = props
 
   return (
-    <li key={index} className={`email ${email.read ? "read" : "unread"}`}>
+    <li
+      onClick={() => {
+        setOpenEmail(email)
+      }}
+      key={index}
+      className={`email ${email.read ? 'read' : 'unread'}`}
+    >
       <div className="select">
         <input
           className="select-checkbox"
@@ -22,7 +28,7 @@ function Email(props) {
       <div className="sender">{email.sender}</div>
       <div className="title">{email.title}</div>
     </li>
-  );
+  )
 }
 
-export default Email;
+export default Email
